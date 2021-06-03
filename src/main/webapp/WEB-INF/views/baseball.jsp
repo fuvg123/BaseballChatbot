@@ -22,7 +22,7 @@
 					<a href="">타 자</a>
 				</div>
 				<div class="event_items">
-					<a href="#">투수</a>
+					<a href="#">투 수</a>
 				</div>
 				<div class="event_items">
 					<a href="#">수 비</a>

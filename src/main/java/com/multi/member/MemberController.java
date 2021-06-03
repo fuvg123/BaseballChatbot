@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.multi.member.Pitcher01.Pitcher01Service;
+import com.multi.member.Pitcher01.Pitcher01VO;
 import com.multi.member.hitter01.Hitter01Service;
 import com.multi.member.hitter01.hitter01VO;
 
@@ -21,18 +23,29 @@ public class MemberController {
 	@Autowired
 	private Hitter01Service hitter01Service;
 	
+	@Autowired
+	private Pitcher01Service Pitcher01Service;
+	
 	// 메인 페이지
 	@RequestMapping("/") // 메인페이지
 	public String mainPage() {
 		return "index"; // index.jsp
 	}
 //---------------------------------------------------------
-	@RequestMapping("/baseball")	// 야구
-	public String batter1(Model model) {
+	@RequestMapping("/baseball")	// 야구-타자
+	public String baseball(Model model) {
 		ArrayList<hitter01VO> hitter01List = hitter01Service.hitter01List();
 		model.addAttribute("hitter01List",hitter01List);
 		return "baseball";
 	}
+	
+	@RequestMapping("/baseball2")	// 야구-투수
+	public String baseball2(Model model) {
+		ArrayList<Pitcher01VO> pitcher01List = Pitcher01Service.pitcher01List();
+		model.addAttribute("pitcher01List",pitcher01List);
+		return "baseball2";
+	}
+	
 
 //---------------------------------------------------------
 	@RequestMapping("/Football") // 축구

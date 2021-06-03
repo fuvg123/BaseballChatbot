@@ -8,18 +8,20 @@
 <title>baseball(야구)페이지 입니다.</title>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/css/baseball.css'/>">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value='/css/main_footer.css'/>">
 </head>
 <body>
 	<div id="wrap">
 		<div class="header">
 			<div class="Logo">
-				<a href="/">로고</a>
+				<a href="/">로고 또는 메인화면으로 돌아가기</a>
 				<!-- 메인 화면으로 돌아가기 -->
 			</div>
 			<div class="event">
 				<!--  경기 종목들 -->
 				<div class="event_items">
-					<a href="">타 자</a>
+					<a href="#">타 자</a>
 				</div>
 				<div class="event_items">
 					<a href="#">투 수</a>
@@ -34,27 +36,29 @@
 			<!-- end event -->
 		</div>
 		<!-- end header -->
+
 		<!-- 선수 검색 창 -->
 		<div class="select_area">
-
 			<div class="select">
-				<h3 id="select_title">선수검색</h3>
-			</div>
-			<!--end select_title -->
+				<div class="select1">
+					<h3 id="select_title">선수검색</h3>
+				</div>
+				<!--end select_title -->
 
-			<div class="select">
-				<form action="#" id="select_form">
-					<input type="text" id="sel_player" placeholder="ex)선수이름">
-				</form>
+				<div class="select2">
+					<form action="#" id="select_form">
+						<input type="text" id="sel_player" placeholder="  ex) 선수이름">
+					</form>
+				</div>
+				<!--end select_form -->
 			</div>
-			<!--end select_form -->
+			<!-- end select -->
 		</div>
 
-		<!-- 리스트 네비바 -->
-		<div class="list_items">
+		<!-- 리스트:기록 테이블 -->
+		<div class="list_body">
 			<form action="#">
-				<table border="1">
-
+				<table class="baseball_list">
 					<tr>
 						<th>순위</th>
 						<th>선수명</th>
@@ -117,11 +121,14 @@
 					</c:forEach>
 				</table>
 			</form>
-
 		</div>
+		<!-- end list_body -->
 	</div>
 	<!-- end wrap -->
-
-
+	<div id="footer">
+		<br> <br> <a
+			href="https://drive.google.com/drive/folders/1EPHrF_y4CtRxgS1JM9hk4yCVCFsROWyM">
+			4조[AI 유나이티드 스포츠 클럽-드라이브] </a>
+	</div>
 </body>
 </html>
